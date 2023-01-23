@@ -11,7 +11,7 @@ function App() {
       const fetchedTodos = await getTodos();
       setTodos(fetchedTodos);
     }
-
+    fetchTodos();
   }, []);
 
 
@@ -22,7 +22,7 @@ function App() {
       <ul className='todos'>
         {todos.map((todo) => (
           <li key={todo._id}>
-
+            {todo.title} {todo.description}
           </li>
         ))}
       </ul>
