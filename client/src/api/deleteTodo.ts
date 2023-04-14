@@ -1,5 +1,7 @@
+import { config } from "../config/config";
+
 export async function deleteTodo(todoId: string) {
-  await fetch(`http://localhost:5000/${todoId}`, {
+  await fetch(`${config.API_URL}/${todoId}`, {
     method: "DELETE",
   });
 }
